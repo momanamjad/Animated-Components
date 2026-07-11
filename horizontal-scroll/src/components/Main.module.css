@@ -1,0 +1,47 @@
+/* Card component start */
+.card_container{
+    width: 100%;
+    /* height: 100%; */
+    /* transform: translateX(100vw); */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+    
+}
+.img_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 40vw;
+    border: 1px solid rgb(255, 255, 255);
+    
+}
+/* end */
+
+/* horizontal component start */
+.container{
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items:  flex-start;
+    justify-content: center;
+    
+}
+.h_scroll{
+    position: sticky;
+    width: 100%;
+    top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+}
+/* end */

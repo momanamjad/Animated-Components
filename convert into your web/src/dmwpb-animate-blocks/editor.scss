@@ -1,0 +1,129 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@use "./scss/_animations.scss" as *;
+
+
+.dmwpb__panel {
+  .components-panel__body-toggle {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    svg {
+      margin-left: 0; 
+      max-width: 32px;
+    }
+  }
+
+	.components-input-control__container {
+		width: 125px;
+	}
+
+	.components-panel__row label {
+		margin-right: 0;
+	}
+}
+
+// Change order for the toolbar menu icon
+.block-editor-block-toolbar {
+  > .block-editor-block-toolbar__slot {
+    &:has(.dmwpb__toolbar-icon) {
+      order: -1;
+    }
+  }
+}
+
+.components-panel__row {
+  // &:first-of-type {
+  //   margin-top: 20px;
+  // }
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  &.animations__row {
+    justify-content: end;
+    align-items: baseline;
+
+    input[type="number"] {
+      width: 121.41px;
+    }
+
+    &:has(.row__unit) {
+      .components-input-control__container {
+        width: 105px;
+      }
+    }
+  }
+
+  &.animations__row--set {
+    .components-base-control__field {
+      margin-bottom: 0;
+    }
+  }
+
+  &.animations__row--start {
+    margin-top: 25px;
+  }
+
+  &.margin--large {
+    margin-top: 15px;
+  }
+
+  .row__unit {
+    width: 20px;
+    padding-left: 5px;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: left;
+    color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+    cursor: pointer;
+  }
+
+  .components-base-control {
+    margin-bottom: 0 !important;
+  }
+
+  .components-input-control__label {
+    display: flex !important;
+    align-items: center;
+    padding-right: 3px;
+
+    &:has(svg) {
+      padding-right: 0;
+    }
+
+    svg {
+      margin-right: -3px;
+      cursor: pointer;
+      fill: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+    }
+  }
+}
+
+.dmwpb__toolbar-icon {
+  padding: 2px !important;
+
+  svg {
+    max-width: 29px !important;
+  }
+}
+
+.dmwpb__tooltip {
+  max-width: 220px;
+
+  strong {
+    opacity: .65;
+  }
+}
+
+.dmwpb__run-animation {
+  animation-timing-function: ease;
+  animation-fill-mode: none;
+}

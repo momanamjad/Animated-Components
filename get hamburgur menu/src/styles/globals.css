@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(5deg, white, white, white, white);
+}
+.hero::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, black 1px, transparent 1px 45px) 50% 50% / 45px 45px,
+    linear-gradient(black 1px, transparent 1px 45px) 50% 50% / 45px 45px;
+  -webkit-mask: linear-gradient(0deg, transparent, transparent 62%, white);
+  mask: linear-gradient(0deg, transparent, transparent 62%, white);
+}
+.gradient-cream {
+  background: linear-gradient(180deg, #fffdd1, #848370, black);
+}
+.gradient-blue {
+  background: linear-gradient(180deg, black, black);
+}
+
+/*  */
+@media (min-width: 1024px) {
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+}
+
+/*  */
+:root {
+  --gradient: linear-gradient(90deg, white, white, #eab308, #ec4899);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.title {
+  margin: 0 0 0.5em;
+  font-weight: 900;
+  color: #ee6352;
+  margin: 0;
+
+  background-image: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  transition: background-position 800ms;
+}
+
+.title:hover {
+  background-position: right;
+}

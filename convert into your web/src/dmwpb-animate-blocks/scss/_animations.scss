@@ -1,0 +1,169 @@
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+
+    filter: blur(0px);
+  }
+}
+
+
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    
+    filter: blur(0px);
+  }
+}
+
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    opacity: 0;
+    transform: scale(1.2);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(40px); 
+
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    transform: translateY(0);
+
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(40px); 
+
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    transform: translateX(0);
+
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translateY(-40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    transform: translateY(0);
+    
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-40px);
+    
+    filter: blur(var(--blur, 0px));
+  }
+
+  to {
+    transform: translateX(0);
+    
+    filter: blur(0px);
+  }
+}
