@@ -12,10 +12,10 @@ const links = [
   { name: "About", href: "#about", external: false },
   { name: "Work Experience", href: "#work-experience", external: false },
   { name: "tech stack", href: "#tech-stack", external: false },
-  { name: "Twitter", href: "https://x.com/mkh_dev", external: true },
-  { name: "Linkedin", href: "https://www.linkedin.com/in/mohammadkhakshoor/", external: true },
-  { name: "Github", href: "https://github.com/mohammadkhakshoor", external: true },
-  { name: "Instagram", href: "https://www.instagram.com/m.khakshoor/", external: true },
+  { name: "Twitter", href: "/", external: true },
+  { name: "Linkedin", href: "www.linkedin.com/in/moman-amjad", external: true },
+  { name: "Github", href: "https://github.com/momanamjad", external: true },
+  { name: "Instagram", href: "/", external: true },
 ];
 const variants = {
   closed: {
@@ -122,11 +122,11 @@ const Navbar = () => {
         >
           <Circle className={cn("stroke-gray-800 scale-125")} />
         </div>
-        <div className="flex gap-7 sm:gap-16 w-full  items-center justify-between">
+        <div className="flex items-center justify-between w-full gap-7 sm:gap-16">
           {/* <p className="leading-none bg-gray-700  p-0.5 size-9 grid place-content-center rounded-full text-gray-50">
             MK
           </p> */}
-          <div className="size-9 bg-gray-700  grid place-content-center rounded-full text-gray-50">
+          <div className="grid bg-gray-700 rounded-full size-9 place-content-center text-gray-50">
             <Logo className="size-full" />
           </div>
           <p className="leading-none bg-gradient-to-r from-yellow-500 to-pink-500 text-transparent bg-clip-text py-2  px-1 sm:p-0.5  whitespace-nowrap font-semibold relative top-1 text-lg sm:text-2xl font-whiteList">
@@ -144,12 +144,12 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     target="_blank"
-                    className="leading-none group flex items-center gap-3 my-2 pl-1 text-base md:text-xl text-gray-50 font-SFProDisplay relative"
+                    className="relative flex items-center gap-3 pl-1 my-2 text-base leading-none group md:text-xl text-gray-50 font-SFProDisplay"
                   >
                     <span className="bg-gray-700 border-2  border-dashed border-gray-600 p-0.5 size-7 font-inter grid place-content-center rounded-full group-hover:translate-x-2 transition-all duration-200">
                       <ArrowRight stroke="white" isNavbarOpen={isNavbarOpen} />
                     </span>
-                    <span className="transition-all block duration-100 title">{link.name}</span>
+                    <span className="block transition-all duration-100 title">{link.name}</span>
                   </a>
                 </motion.li>
               ) : (
@@ -157,12 +157,12 @@ const Navbar = () => {
                   <Link
                     onClick={toggleNavbar}
                     href={link.href}
-                    className="leading-none group flex items-center gap-3 my-2 pl-1 text-base md:text-xl text-gray-50 font-SFProDisplay relative"
+                    className="relative flex items-center gap-3 pl-1 my-2 text-base leading-none group md:text-xl text-gray-50 font-SFProDisplay"
                   >
                     <span className="bg-gray-700 border-2  border-dashed border-gray-600 p-0.5 size-7 font-inter grid place-content-center rounded-full group-hover:translate-x-2 transition-all duration-200">
                       <ArrowRight stroke="white" isNavbarOpen={isNavbarOpen} />
                     </span>
-                    <span className=" transition-all block duration-100 title">{link.name}</span>
+                    <span className="block transition-all duration-100 title">{link.name}</span>
                   </Link>
                 </motion.li>
               )
