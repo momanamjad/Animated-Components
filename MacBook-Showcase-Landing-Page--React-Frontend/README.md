@@ -12,8 +12,6 @@
 
 A **single-page application (SPA)**—one HTML shell, one React tree, no server-rendered pages and **no built-in REST or GraphQL API**. It is built for **learning and portfolio demos**: you can study how a marketing-style landing page combines **layout (Tailwind)**, **time-based and scroll-linked motion (GSAP)**, **viewport-driven CSS reveals (`IntersectionObserver`)**, and **interactive 3D (Three.js through React Three Fiber)** in one cohesive codebase. All marketing copy, nav targets, and asset paths are **static** (see `src/constants/index.ts` and `public/`). Extend it with a backend or CMS when your product outgrows hardcoded data.
 
-**Live demo:** [https://macbook-ui.vercel.app/](https://macbook-ui.vercel.app/)
-
 ![Image 1](https://github.com/user-attachments/assets/98e5b72e-e603-49c0-85b6-2a6319ab41ba)
 ![Image 2](https://github.com/user-attachments/assets/6e8ba196-82be-48d5-b11e-13528558c3ad)
 ![Image 3](https://github.com/user-attachments/assets/37934195-7c53-402a-aa72-2a93348a5378)
@@ -350,11 +348,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Happy Coding! 🎉
 
-This is an **open-source project** - feel free to use, enhance, and extend this project further!
-
-If you have any questions or want to share your work, reach out via GitHub or my portfolio at [https://www.arnobmahmud.com](https://www.arnobmahmud.com).
-
-**Enjoy building and learning!** 🚀
+This is an **open-source project** - feel free to use, enhance, and extend this project further!**Enjoy building and learning!** 🚀
 
 Thank you! 😊
 
