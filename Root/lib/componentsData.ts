@@ -27,5 +27,12 @@ export const components: ComponentData[] = [
     description: 'A React frontend landing page showcasing a 3D-like MacBook scroll animation.',
     folderName: 'MacBook-Showcase-Landing-Page--React-Frontend',
     icon: 'Laptop',
+  },
+  {
+    slug: 'ecommerce-template',
+    title: 'eCommerce Shop Template',
+    description: 'A complete eCommerce shop template built with HTML and CSS.',
+    folderName: 'eCommerce Template',
+    icon: 'ShoppingCart',
   }
 ];

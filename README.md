@@ -29,3 +29,4 @@ Each component is also a standalone Next.js/React application:
 - [`get hamburgur menu`](./get%20hamburgur%20menu)
 - [`horizontal-scroll of cards on scroll`](./horizontal-scroll%20of%20cards%20on%20scroll)
 - [`MacBook-Showcase-Landing-Page--React-Frontend`](./MacBook-Showcase-Landing-Page--React-Frontend)
+- [`eCommerce Template`](./eCommerce%20Template)
