@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { components } from '@/lib/componentsData';
-import { Menu, MousePointerClick, Laptop, ArrowRight } from 'lucide-react';
+import { Menu, MousePointerClick, Laptop, ArrowRight, ShoppingCart } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   Menu: <Menu className="w-8 h-8" />,
   MousePointerClick: <MousePointerClick className="w-8 h-8" />,
-  Laptop: <Laptop className="w-8 h-8" />
+  Laptop: <Laptop className="w-8 h-8" />,
+  ShoppingCart: <ShoppingCart className="w-8 h-8" />
 };
 
 export default function Home() {
