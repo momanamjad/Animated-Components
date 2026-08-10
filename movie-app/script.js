@@ -1,8 +1,8 @@
 const API_URL =
-  "https://api.themoviedb.org/3/movie/popular?sort_by=popularity.desc&api_key=5c77e948794ac181575442768198e28c&page=1";
+  "https://api.themoviedb.org/3/movie/popular?sort_by=popularity.desc&api_key=<YOUR_TMDB_API_KEY>&page=1";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCH_API =
-  "https://api.themoviedb.org/3/search/movie?api_key=5c77e948794ac181575442768198e28c&query='";
+  "https://api.themoviedb.org/3/search/movie?api_key=<YOUR_TMDB_API_KEY>&query='";
 
 const main = document.querySelector("main");
 const search = document.querySelector(".search");
