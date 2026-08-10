@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #3494e4;
+  --fill-color: #6ab3f8;
+  --border-color: #144fc6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  flex-direction: row;
+  display: flex;
+  gap: 50px;
+}
+
+.small-cups-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.cup {
+  background-color: #fff;
+  height: 330px;
+  width: 150px;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cup .remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+.remained span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 12px;
+}
+
+.percentage {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fill-color);
+  transition: 0.3s ease;
+}
+
+.cups {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 5px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3 ease;
+  font-size: 14px;
+}
+
+.cup.cup-small.fill {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+@media (max-width: 780px) {
+  body {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    margin: 20px 0 10px 0;
+  }
+}

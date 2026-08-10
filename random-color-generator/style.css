@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.content-hex,
+.content-rgb {
+  flex: 1;
+}
+
+.content-hex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.content-rgb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: rgb(255, 0, 0);
+}
