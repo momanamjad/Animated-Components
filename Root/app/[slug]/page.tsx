@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { components } from '@/lib/componentsData';
 import Link from 'next/link';
-import { ArrowLeft, Code, FileText, Play } from 'lucide-react';
+import { ArrowLeft, Code, FileText, Download } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import CodeViewer from './CodeViewer';
+import TerminalCommand from './TerminalCommand';
 
 // Required for Next.js dynamic routing
 export function generateStaticParams() {
@@ -63,6 +64,9 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
     }
   }
 
+  // Format degit command handling spaces
+  const degitCommand = `npx degit "momanamjad/Animated-Components/${component.folderName}" my-app`;
+
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-50 selection:bg-indigo-500/30 font-sans pb-32">
       {/* Header */}
@@ -86,13 +90,18 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
         </div>
 
         {/* Action Bar */}
-        <div className="flex flex-wrap gap-4 mb-16">
-          <div className="flex items-center bg-indigo-500/10 text-indigo-400 px-6 py-3 rounded-full border border-indigo-500/20">
-            <Play className="w-5 h-5 mr-2" />
-            <span className="font-medium text-sm">
-              cd "../{component.folderName}" && npm run dev
-            </span>
-          </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-16">
+          <TerminalCommand command={degitCommand} />
+          
+          <a 
+            href={`https://github.com/momanamjad/Animated-Components/tree/main/${encodeURIComponent(component.folderName)}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-6 py-2.5 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-xl transition-colors shadow-lg shadow-indigo-500/20"
+          >
+            <Download className="w-4 h-4" />
+            View Source on GitHub
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
