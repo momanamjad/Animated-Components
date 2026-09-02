@@ -4,6 +4,7 @@ import { components } from '@/lib/componentsData';
 import Link from 'next/link';
 import { ArrowLeft, Code, FileText, Play } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import CodeViewer from './CodeViewer';
 
 // Required for Next.js dynamic routing
 export function generateStaticParams() {
@@ -45,7 +46,8 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
     'src/App.jsx',
     'src/App.tsx',
     'src/index.js',
-    'app/page.tsx'
+    'app/page.tsx',
+    'index.html'
   ];
 
   for (const p of possibleCodePaths) {
@@ -117,14 +119,9 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
                 <Code className="w-6 h-6 mr-3 text-indigo-400" />
                 <div>
                   <h3 className="font-semibold">Core Codebase</h3>
-                  <p className="text-xs text-neutral-500 mt-1">{mainCodePathDisplay}</p>
                 </div>
               </div>
-              <div className="flex-1 overflow-auto bg-[#0d0d0d] p-4 text-sm font-mono leading-relaxed text-neutral-300">
-                <pre>
-                  <code>{mainCodeContent}</code>
-                </pre>
-              </div>
+              <CodeViewer code={mainCodeContent} filePath={mainCodePathDisplay || 'Not Found'} />
             </div>
           </div>
 
